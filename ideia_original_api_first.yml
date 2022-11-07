@@ -5,8 +5,8 @@ info:
     Este é o contrato que representa as api's do nosso software Ideia Original
     
     Some useful links:
-    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
-    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+    - [The Ideia Original repository](https://github.com/Hajadalaj/arch_software_distributed-apis_and_web_services/)
+    - [The source API definition for the Ideia Original](https://github.com/Hajadalaj/arch_software_distributed-apis_and_web_services)
   termsOfService: http://swagger.io/terms/
   contact:
     email: apiteam@swagger.io
