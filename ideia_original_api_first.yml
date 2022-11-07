@@ -357,6 +357,116 @@ paths:
         '405':
           description: Invalid input
   /servico/order/{orderId}:
+    /cliente:
+    post:
+      tags:
+        - Cliente
+      summary: Create cliente
+      description: This can only be done by the logged in cliente.
+      operationId: createcliente
+      requestBody:
+        description: Created cliente object
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/cliente'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/cliente'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/cliente'
+      responses:
+        default:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cliente'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/cliente'
+  /usuario/createWithList:
+    post:
+      tags:
+        - Cliente
+      summary: Creates list of clientes with given input array
+      description: Creates list of clientes with given input array
+      operationId: createclientesWithListInput
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/cliente'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cliente'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/cliente'
+        default:
+          description: successful operation
+  /usuario/login:
+    get:
+      tags:
+        - Cliente
+      summary: Logs cliente into the system
+      description: ''
+      operationId: logincliente
+      parameters:
+        - name: clientename
+          in: query
+          description: The cliente name for login
+          required: false
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the cliente
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: Invalid clientename/password supplied
+  /usuario/logout:
+    get:
+      tags:
+        - Cliente
+      summary: Logs out current logged in cliente session
+      description: ''
+      operationId: logoutcliente
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  /usuario/{clientename}:
     get:
       tags:
         - Serviço
