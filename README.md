@@ -16,7 +16,7 @@ Segue um breve exemplo do padrão utilizado:
 | Nome do variavel | tipoServico |
 | Nome da API | cliente |
 
-<b>*A URI de serviço foi atualizada para suportar o versionamento das APIs.</b>
+**A URI de serviço foi atualizada para suportar o versionamento das APIs.**
 
 Para gestão das APIs, é proposto os seguintes tópicos:
 
