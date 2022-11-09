@@ -14,6 +14,7 @@ Segue um breve exemplo do padrão utilizado:
 | Nome da aplicação | IO - Prestação de Serviçços API  |
 | URI do serviço | https://ideiaoriginal.net/v1/prestador/codigoPrestador/542/registroServicosPrestados | 
 | Nome do variavel | tipoServico |
+| Nome do Metodo | criarCategoria |
 | Nome da API | cliente |
 
 **A URI de serviço foi atualizada para suportar o versionamento das APIs.**
